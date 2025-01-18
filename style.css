@@ -1,0 +1,218 @@
+:root {
+  --background-colour: #323437;
+  --background-gradient: #273f6a;
+  --main-colour: #d53a9d;
+  --secondary-colour: #743ad5;
+  --accent-colour: #344cb7;
+  --text-colour: #d1d0c5;
+  --text-secondary-colour: #787d82;
+  --text-tertiary-colour: #d1d0c5;
+  --main-gradient: linear-gradient(
+    to right,
+    var(--main-colour),
+    var(--secondary-colour)
+  );
+}
+
+html {
+    box-sizing: border-box;
+    position: relative;
+  
+    &::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        180deg,
+        var(--background-colour),
+        var(--background-gradient)
+      );
+      z-index: -1;
+    }
+  }
+
+body {
+  font-family: "Noto Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  background-image: linear-gradient(
+    180deg,
+    var(--background-colour),
+    var(--background-gradient)
+  );
+  color: var(--text-colour);
+  margin: 5vh 20vw;
+}
+
+svg {
+  height: 1.4rem;
+}
+
+h5,
+h6 {
+  display: inline-block;
+  font-size: 2rem;
+  margin: 0;
+}
+
+h6 {
+  position: absolute;
+  right: 20vw;
+  padding-top: 1.5vh;
+  color: var(--text-tertiary-colour);
+  font-size: 1rem;
+}
+
+h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 8rem;
+  line-height: 7rem;
+  margin: 0;
+}
+
+h2 {
+  font-weight: 200;
+  font-size: 4rem;
+  margin: 0;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+  margin: 0;
+  background-image: linear-gradient(
+    to left,
+    var(--secondary-colour),
+    var(--main-colour)
+  );
+  color: transparent;
+  background-clip: text;
+}
+
+p {
+  max-width: 35vw;
+  font-size: 1.4rem;
+  color: var(--text-tertiary-colour);
+}
+
+ul {
+  padding-inline-start: 1vw;
+}
+
+li {
+  font-size: 1.4rem;
+  margin: 2px;
+  list-style-type: none;
+}
+
+li::before {
+  content: "▹";
+  color: var(--main-colour);
+  padding-right: 10px;
+}
+
+hr {
+  border: none;
+  background: var(--main-gradient);
+  height: 0.5vh;
+  margin: 5vh 0 3vh 0;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1.4rem;
+  padding: 1.2rem;
+  color: var(--main-colour);
+
+  background-color: transparent;
+
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 1rem;
+  border-image: linear-gradient(270deg, #743ad5 0%, #d53a9d 100%);
+  border-image-slice: 1;
+  animation: 0.5s gradientSpin 5;
+}
+
+button:hover {
+  animation: 0.5s gradientSpin infinite;
+}
+
+footer {
+  margin-top: 5vh;
+  text-align: center;
+  color: var(--text-tertiary-colour);
+}
+
+.fade-in {
+  animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    padding-bottom: 10vh;
+  }
+  100% {
+    opacity: 1;
+    padding-bottom: 0;
+  }
+}
+
+@keyframes gradientSpin {
+  0% {
+    border-image: linear-gradient(288deg, #743ad5 0%, #d53a9d 100%);
+    border-image-slice: 1;
+  }
+  10% {
+    border-image: linear-gradient(324deg, #743ad5 0%, #d53a9d 100%);
+    border-image-slice: 1;
+  }
+  20% {
+    border-image: linear-gradient(360deg, #743ad5 0%, #d53a9d 100%);
+    border-image-slice: 1;
+  }
+  30% {
+    border-image: linear-gradient(0deg, #743ad5 0%, #d53a9d 100%);
+    border-image-slice: 1;
+  }
+  40% {
+    border-image: linear-gradient(36deg, #743ad5 0%, #d53a9d 100%);
+    border-image-slice: 1;
+  }
+  50% {
+    border-image: linear-gradient(72deg, #743ad5 0%, #d53a9d 100%);
+    border-image-slice: 1;
+  }
+  60% {
+    border-image: linear-gradient(108deg, #743ad5 0%, #d53a9d 100%);
+    border-image-slice: 1;
+  }
+  70% {
+    border-image: linear-gradient(144deg, #743ad5 0%, #d53a9d 100%);
+    border-image-slice: 1;
+  }
+  80% {
+    border-image: linear-gradient(180deg, #743ad5 0%, #d53a9d 100%);
+    border-image-slice: 1;
+  }
+  90% {
+    border-image: linear-gradient(216deg, #743ad5 0%, #d53a9d 100%);
+    border-image-slice: 1;
+  }
+  100% {
+    border-image: linear-gradient(252deg, #743ad5 0%, #d53a9d 100%);
+    border-image-slice: 1;
+  }
+}
+
+/* --main-colour: #d65ccc; */
