@@ -1,14 +1,10 @@
-/* 
-TODO: Update content proof read
-TODO: Potentially add other experience
-TODO: Make Mobile Friendly 
-*/
 :root {
   --background-colour: #323437;
   --background-gradient: #273f6a;
   --main-colour: #d53a9d;
   --secondary-colour: #743ad5;
   --accent-colour: #344cb7;
+  --name-colour: white;
   --text-colour: #d1d0c5;
   --text-secondary-colour: #787d82;
   --text-tertiary-colour: #d1d0c5;
@@ -18,6 +14,22 @@ TODO: Make Mobile Friendly
     var(--secondary-colour)
   );
 }
+
+/* :root {
+  --background-colour: #f4f7f6;
+  --background-gradient: #e9eeed;
+  --main-colour: #00b894; 
+  --secondary-colour: #0984e3; 
+  --accent-colour: #dfe6e9;
+  --text-colour: #2d3436;
+  --text-secondary-colour: #636e72;
+  --text-tertiary-colour: #2d3436;
+  --main-gradient: linear-gradient(
+    to right,
+    var(--main-colour),
+    var(--secondary-colour)
+  );
+} */
 
 html {
   box-sizing: border-box;
@@ -45,21 +57,30 @@ body {
   font-weight: 400;
   font-style: normal;
   font-variation-settings: "wdth" 100;
-  background-image: linear-gradient(
-    180deg,
-    var(--background-colour),
-    var(--background-gradient)
-  );
+  background-image: var(--main-gradient);
   color: var(--text-colour);
   margin: 5vh 20vw;
 }
 
+span {
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 10%;
+  border-color: var(--main-colour) ;
+  fill: var(--main-colour);
+  text-align: center;
+  padding: 1.5vw;
+  margin: 0.2vw;
+  float: right;
+}
+
 svg {
   height: 1.4rem;
+  vertical-align: middle;
 }
 
 h1 {
-  color: white;
+  color: var(--name);
   font-weight: 700;
   font-size: 8rem;
   line-height: 7rem;
@@ -101,7 +122,7 @@ h6 {
 }
 
 p {
-  max-width: 35vw;
+  max-width: 40vw;
   font-size: 1.4rem;
   color: var(--text-tertiary-colour);
 }
@@ -140,7 +161,7 @@ button {
   border-style: solid;
   border-width: 3px;
   border-radius: 1rem;
-  border-image: linear-gradient(270deg, #743ad5 0%, #d53a9d 100%);
+  border-image: linear-gradient(270deg, var(--secondary-colour) 0%,  var(--main-colour) 100%);
   border-image-slice: 1;
   animation: 0.5s gradientSpin 5;
 }
@@ -172,47 +193,47 @@ footer {
 
 @keyframes gradientSpin {
   0% {
-    border-image: linear-gradient(288deg, #743ad5 0%, #d53a9d 100%);
+    border-image: linear-gradient(288deg, var(--secondary-colour) 0%,  var(--main-colour) 100%);
     border-image-slice: 1;
   }
   10% {
-    border-image: linear-gradient(324deg, #743ad5 0%, #d53a9d 100%);
+    border-image: linear-gradient(324deg, var(--secondary-colour) 0%,  var(--main-colour) 100%);
     border-image-slice: 1;
   }
   20% {
-    border-image: linear-gradient(360deg, #743ad5 0%, #d53a9d 100%);
+    border-image: linear-gradient(360deg, var(--secondary-colour) 0%,  var(--main-colour) 100%);
     border-image-slice: 1;
   }
   30% {
-    border-image: linear-gradient(0deg, #743ad5 0%, #d53a9d 100%);
+    border-image: linear-gradient(0deg, var(--secondary-colour) 0%,  var(--main-colour) 100%);
     border-image-slice: 1;
   }
   40% {
-    border-image: linear-gradient(36deg, #743ad5 0%, #d53a9d 100%);
+    border-image: linear-gradient(36deg, var(--secondary-colour) 0%,  var(--main-colour) 100%);
     border-image-slice: 1;
   }
   50% {
-    border-image: linear-gradient(72deg, #743ad5 0%, #d53a9d 100%);
+    border-image: linear-gradient(72deg, var(--secondary-colour) 0%,  var(--main-colour) 100%);
     border-image-slice: 1;
   }
   60% {
-    border-image: linear-gradient(108deg, #743ad5 0%, #d53a9d 100%);
+    border-image: linear-gradient(108deg, var(--secondary-colour) 0%,  var(--main-colour) 100%);
     border-image-slice: 1;
   }
   70% {
-    border-image: linear-gradient(144deg, #743ad5 0%, #d53a9d 100%);
+    border-image: linear-gradient(144deg, var(--secondary-colour) 0%,  var(--main-colour) 100%);
     border-image-slice: 1;
   }
   80% {
-    border-image: linear-gradient(180deg, #743ad5 0%, #d53a9d 100%);
+    border-image: linear-gradient(180deg, var(--secondary-colour) 0%,  var(--main-colour) 100%);
     border-image-slice: 1;
   }
   90% {
-    border-image: linear-gradient(216deg, #743ad5 0%, #d53a9d 100%);
+    border-image: linear-gradient(216deg, var(--secondary-colour) 0%,  var(--main-colour) 100%);
     border-image-slice: 1;
   }
   100% {
-    border-image: linear-gradient(252deg, #743ad5 0%, #d53a9d 100%);
+    border-image: linear-gradient(252deg, var(--secondary-colour) 0%,  var(--main-colour) 100%);
     border-image-slice: 1;
   }
 }
